@@ -3,11 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Counter from './Counter';
+import Login from './Login';
+import Example1 from './Example1';
+import MyForm from './MyForm';
+import Registration from './Registration';
+import DisplayData from './DisplayData';
+import SingleData from './SingleData';
+import ProductList from './ProductList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ExampleForNav from './ExampleForNav';
+import { FormWithBoostrap } from './FormWithBoostrap';
+import MyFirstForm from './MyFirstForm';
+import MyExample from './MyExample';
+import MyDataGrid from './MyDataGrid';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <MyDataGrid />
   </React.StrictMode>
 );
 
