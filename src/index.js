@@ -17,11 +17,12 @@ import { FormWithBoostrap } from './FormWithBoostrap';
 import MyFirstForm from './MyFirstForm';
 import MyExample from './MyExample';
 import MyDataGrid from './MyDataGrid';
+import MyParent from './MyParet';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyDataGrid />
+    <MyParent />
   </React.StrictMode>
 );
 

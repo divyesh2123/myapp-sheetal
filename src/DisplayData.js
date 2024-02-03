@@ -1,32 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import axios  from 'axios'
+import { DataGrid } from '@mui/x-data-grid';
 
-export default function DisplayData() {
+export default function DisplayData(props) {
 
-  const [data,setData] = useState([])
-
-  useEffect(()=>{
-
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then(y=>{
-        setData(y.data)
-    })
-
-
+  const columns = [
+    {field:'id',headerName:'id',width:120},
+    { field: 'firstName', headerName: 'first Name', width: 150 },
+    { field: 'lastName', headerName: 'last Name', width: 150 },
+   
+  ];
+ 
 
 
-  },[])
+
   return (
-    <table>{
-
-        data.map((v)=>{
-
-            return (<tr><td>{v.name}</td><td>{v.username}</td></tr>)
-
-
-        })
-        
-        
-        }</table>
+    <div style={{ height: 300, width: '100%' }}>
+      <DataGrid rows={props.data} columns={columns} />
+    </div>
   )
 }
