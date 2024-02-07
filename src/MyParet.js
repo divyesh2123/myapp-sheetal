@@ -14,6 +14,20 @@ export default function MyParent() {
       const handleClose = () => {
         setOpen(false);
       };
+
+      const removeItem = (index)=>{
+
+        
+      let p =  [...data];
+
+      p.splice(index-1,1);
+
+      
+      console.log(p);
+
+        setData(p);
+
+      }
     
   return (
     <div>
@@ -23,7 +37,7 @@ export default function MyParent() {
       </Button>
 
         <MyForm1 open={open} handleClose={handleClose} data={data} setData={setData}/>
-        <DisplayData data={data}/>
+        <DisplayData data={data} removeItem={removeItem}/>
     </div>
   )
 }
