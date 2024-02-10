@@ -14,6 +14,16 @@ export default function MyForm1(props) {
         lastName : ''
     })
 
+    React.useEffect(()=>{
+
+      if(props.index >=0)
+      {
+        setform(props.data[props.index])
+
+      }
+
+    },[])
+
     const handleChange = (e)=>{
 
       setform({...form,[e.target.name] : e.target.value})
@@ -22,8 +32,22 @@ export default function MyForm1(props) {
 
     const handleSave= ()=>{
         let d= [...props.data];
+     
+
+      if(props.index <= -1)
+      {
         d.push({...form,id:d.length+1 });
-        props.setData(d)
+       
+      }
+      else
+      {
+        d[props.index-1]= {...form,id:props.index };
+
+      }
+
+      console.log(d);
+      props.setData(d);
+      props.setIndex(-1);
         props.handleClose();
 
     }
@@ -49,6 +73,7 @@ export default function MyForm1(props) {
         type="text"
         fullWidth
         variant="standard"
+        value={form?.firstName}
       onChange={handleChange}
 
       />
@@ -63,7 +88,7 @@ export default function MyForm1(props) {
         type="text"
         fullWidth
         variant="standard"
-
+        value={form?.lastName}
         onChange={handleChange}
 
       />

@@ -26,6 +26,9 @@ export default function DisplayData(props) {
           };
 
           const onClick = (e) => {
+            const currentRow = params.row;
+
+            props.editItem(currentRow.id)
           }
           
           return (

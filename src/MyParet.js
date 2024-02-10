@@ -6,7 +6,8 @@ import Button from '@mui/material/Button';
 export default function MyParent() {
 
     const [open, setOpen] = React.useState(false);
-    const [data,setData]= useState([])
+    const [data,setData]= useState([]);
+    const [index,setIndex]= useState(-1);
     const handleClickOpen = () => {
         setOpen(true);
       };
@@ -16,6 +17,7 @@ export default function MyParent() {
       };
 
       const removeItem = (index)=>{
+
 
         
       let p =  [...data];
@@ -28,6 +30,14 @@ export default function MyParent() {
         setData(p);
 
       }
+
+      const editItem = (index)=>{
+
+
+        setIndex(index)
+        setOpen(true);
+
+      }
     
   return (
     <div>
@@ -36,8 +46,12 @@ export default function MyParent() {
         Open form dialog
       </Button>
 
-        <MyForm1 open={open} handleClose={handleClose} data={data} setData={setData}/>
-        <DisplayData data={data} removeItem={removeItem}/>
+        <MyForm1 open={open} handleClose={handleClose} data={data}
+         setData={setData}
+         index={index}
+         setIndex={setIndex}
+         />
+        <DisplayData data={data} removeItem={removeItem} editItem={editItem}/>
     </div>
   )
 }
