@@ -18,11 +18,13 @@ import MyFirstForm from './MyFirstForm';
 import MyExample from './MyExample';
 import MyDataGrid from './MyDataGrid';
 import MyParent from './MyParet';
+import EmployeeA from './EmployeeA';
+import MyApp from './MyApp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyParent />
+    <MyApp />
   </React.StrictMode>
 );
 
