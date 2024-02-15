@@ -21,11 +21,14 @@ import MyParent from './MyParet';
 import EmployeeA from './EmployeeA';
 import MyApp from './MyApp';
 import Employee from './Employee';
+import LoginWithAPI from './LoginWithAPI';
+import Accounts from './Accounts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Employee />
+    <LoginWithAPI />
+    <Accounts/>
   </React.StrictMode>
 );
 
