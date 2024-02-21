@@ -23,12 +23,13 @@ import MyApp from './MyApp';
 import Employee from './Employee';
 import LoginWithAPI from './LoginWithAPI';
 import Accounts from './Accounts';
+import ShowMoreTextToggle from './ShowMoreTextToggle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LoginWithAPI />
-    <Accounts/>
+    <ShowMoreTextToggle text="This is the javascript This is the javascript This is javascript This is the javascript" />
+   
   </React.StrictMode>
 );
 
