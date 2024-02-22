@@ -24,12 +24,14 @@ import Employee from './Employee';
 import LoginWithAPI from './LoginWithAPI';
 import Accounts from './Accounts';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
-
+import { BrowserRouter } from "react-router-dom";
+import MyRoutes from './MyRoutes';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ShowMoreTextToggle text="This is the javascript This is the javascript This is javascript This is the javascript" />
-   
+     <BrowserRouter>
+    <MyRoutes />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
