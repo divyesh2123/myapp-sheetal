@@ -26,7 +26,7 @@ import Accounts from './Accounts';
 import ShowMoreTextToggle from './ShowMoreTextToggle';
 import { BrowserRouter } from "react-router-dom";
 import MyRoutes from './MyRoutes';
-import './axios/global'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

@@ -1,5 +1,6 @@
-import axios from 'axios';
+
 import React, { useEffect, useState } from 'react'
+import authFetchData from './axios/custom';
 
 export default function Accounts() {
 
@@ -7,16 +8,11 @@ export default function Accounts() {
 
   useEffect(()=>{
 
-    let token = JSON.parse(localStorage.getItem("token"))
-    axios.get("https://real-pear-fly-kilt.cyclic.app/accounts",{
-
-    headers:{
-        'Content-Type': "application/json",
-        "Authorization": "Bearer " +token?.jwtToken
-    }
-    }).then(y=>{
+  
+    authFetchData.get("/accounts").then(y=>{
 
         setData(y.data);
+
 
         console.log(y);
     })

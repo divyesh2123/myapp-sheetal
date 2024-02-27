@@ -1,11 +1,12 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
+import authFetchData from './axios/custom';
 
 export default function SheetalAccount() {
 
   useEffect(()=>{
 
-    axios.get(" https://real-pear-fly-kilt.cyclic.app/accounts")
+    authFetchData.get("/accounts")
     .then(y=>{
       console.log(y.data);
     })
